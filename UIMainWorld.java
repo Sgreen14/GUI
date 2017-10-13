@@ -32,6 +32,9 @@ public class UIMainWorld extends World
         
         TextBox textBox1 = new TextBox( "Is this a question?\nYes it is!", 24, true, Color.BLUE, Color.YELLOW );
         addObject( textBox1, 150, 50 );
+        
+        Menu menu1 = new Menu( "File", "New\nOpen\nSave\nClose\nExit", 18, Color.BLACK, Color.lightGray, Color.WHITE, Color.BLUE, new FileCommands());
+        addObject( menu1, 450, 180 );
     }
     
     

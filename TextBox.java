@@ -11,6 +11,7 @@ public class TextBox extends Actor
 {
     private GreenfootImage img;
     private boolean border = false;
+    private String text;
     private int fontSize;
     private Color foreground;
     private Color background;
@@ -21,6 +22,7 @@ public class TextBox extends Actor
         border = hasBorder;
         foreground = fg;
         background = bg;
+        text = message;
         
         img = new GreenfootImage( message, fontSize, foreground, background );
         
@@ -37,6 +39,20 @@ public class TextBox extends Actor
         
         setImage( img );
     }
+    
+    public String getText()
+    {
+        return text;
+    }
+    
+    public void setText( String message )
+    {
+        text = message;
+        img = new GreenfootImage( text, fontSize, foreground, background );
+        display();
+    }
+    
+    
     
     /**
      * Act - do whatever the TextBox wants to do. This method is called whenever
